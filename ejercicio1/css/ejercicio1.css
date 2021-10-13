@@ -1,0 +1,16 @@
+body
+{
+  font-family: arial;
+}
+
+.ok
+{
+  background-color: green;
+  color: white;
+}
+
+.ko
+{
+  background-color: red;
+  color: white;
+}
