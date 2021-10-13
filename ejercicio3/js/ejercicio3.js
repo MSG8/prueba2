@@ -17,18 +17,18 @@ class Vehiculo
   constructor(fechaFabricacion = new Date()) // Valor por defecto
   {
     this.fechaFabricacion = fechaFabricacion;
-    this.propetario = "sin propetario"; //Por defecto no tiene propietario
+    this.propietario; //Por defecto no tiene propietario
   }
 
   vender(comprador) //se llama a vender() y coloca el nombre del comprador
   {
-    this.propetario = comprador;
+    this.propietario = comprador;
   }
 }
 
 class Coche extends Vehiculo
 {
-  constructor(fechaFabricacion = new Date() , matricula = "sin definir", combustible = "sin definir", esNuevo) //Pongo valores por defecto
+  constructor(fechaFabricacion = new Date() , matricula = "sin definir", combustible = "sin definir", esNuevo=false) //Pongo valores por defecto
   {
     super(fechaFabricacion); //Llamamos a super para cambiar valores de la clase padre
     this.matricula = matricula; // Colocamos sin definir por defecto y si el usuario lo dice, se cambia a lo que quiere
@@ -60,7 +60,7 @@ if (!coche.esNuevo)
 if (coche.propietario)
   console.error('Fallo 5: ' + coche.propietario)
 
-coche.vender('Pepe')
+coche.vender('Pepe');
 if (coche.propietario !== 'Pepe')
   console.error('Fallo 6: ' + coche.propietario)
 if (coche.esNuevo)
